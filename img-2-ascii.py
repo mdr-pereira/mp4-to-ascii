@@ -48,6 +48,7 @@ def img_2_ascii(filename, rows = 100, gscale = GSCALE_SIMPLE):
 
 
 def main():
+    #Comment
     filename = sys.argv[1]
 
     _img = img_2_ascii(filename, rows=500)
