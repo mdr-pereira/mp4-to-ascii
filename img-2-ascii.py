@@ -16,7 +16,7 @@ def avg_lumin(image):
     return int(np.average(np.array(image)))
 
 def img_2_ascii(filename, rows = 100, gscale = GSCALE_SIMPLE):
-    image = Image.open(filename).convert('L')
+    image = Image.open(f'images/{filename}').convert('L')
 
     W, H = image.size
 
@@ -52,7 +52,7 @@ def main():
 
     _img = img_2_ascii(filename, rows=500)
 
-    with open("ascii_image.txt", "w") as f:
+    with open(f"outputs/{filename.split('.')[0]}.txt", "w") as f:
         for row in _img:
             f.write("\n")
             for el in row:
